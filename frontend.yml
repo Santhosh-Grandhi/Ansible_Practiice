@@ -1,7 +1,8 @@
-- name: Print Message
+- name: Frontend Setup
   hosts: all
   become: true
   tasks:
-     - name: Print Hello World
-       ansible.builtin.debug:
-         msg: Hello World
+    - name: Installing Ngnix
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
