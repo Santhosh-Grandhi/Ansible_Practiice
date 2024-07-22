@@ -5,13 +5,7 @@
     - name: Installing Ngnix Package
       ansible.builtin.dnf:
         name: nginx
-        state: latest
-
-    - name: Enable and start Ngnix
-      ansible.builtin.systemd_service:
-        state: started
-        name: nginx
-        enabled: true
+        state: present
 
     - name: Copy expense file
       ansible.builtin.copy:
