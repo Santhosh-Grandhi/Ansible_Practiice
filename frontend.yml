@@ -31,7 +31,7 @@
     - name: Download the frontend content and extract
       ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip
-        dest: cd /usr/share/nginx/html
+        dest: /usr/share/nginx/html
         remote_src: yes
 
     - name: Enable and start Ngnix
