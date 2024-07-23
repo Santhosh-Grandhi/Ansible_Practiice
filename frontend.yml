@@ -7,12 +7,6 @@
         name: nginx
         state: present
 
-    - name: Enable and restart Ngnix
-      ansible.builtin.systemd_service:
-        state: started
-        name: nginx
-        enabled: true
-
     - name: Copy expense file
       ansible.builtin.copy:
         src: expense.conf
