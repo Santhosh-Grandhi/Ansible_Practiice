@@ -1,6 +1,7 @@
 - name: MySql Setup
   hosts: all
   become: true
+#  become_user: sudo (optional step as become: true defaults to sudo user))
   tasks:
     - name: Installing Ngnix Package
       ansible.builtin.dnf:
