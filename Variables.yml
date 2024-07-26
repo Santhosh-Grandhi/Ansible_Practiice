@@ -1,0 +1,7 @@
+- name: Variables
+  hosts: localhost
+  vars:
+    NAME: Santhosh
+  tasks:
+    ansible.builtin.debug:
+      msg: Name is {{ NAME }}
