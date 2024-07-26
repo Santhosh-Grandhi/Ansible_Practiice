@@ -3,5 +3,6 @@
   vars:
     NAME: Santhosh
   tasks:
-    ansible.builtin.debug:
-      msg: Name is {{ NAME }}
+    - name: print variable
+      ansible.builtin.debug:
+        msg: Name is {{ NAME }}
