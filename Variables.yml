@@ -11,5 +11,6 @@
       ansible.builtin.debug:
         msg: Fruit1 is {{ FRUIT[0] }}, Fruit2 is {{ FRUIT[1] }}
         vars:
-          - FRUIT: banana
-          - FRUIT: apple
+          FRUIT:
+            - banana
+            - Apple
