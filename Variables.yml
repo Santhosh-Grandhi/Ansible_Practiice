@@ -9,8 +9,7 @@
 
     - name: Print variable at task level
       ansible.builtin.debug:
-        msg: Fruit1 is {{ FRUIT[0] }}, Fruit2 is {{ FRUIT[1] }}
+        msg: Fruit1 is {{ FRUIT }}
         vars:
-          FRUIT:
-            - banana
-            - Apple
+          FRUIT: banana
+
