@@ -45,9 +45,12 @@
 #     MYSQL Python is to support load schema concept below as it is coming from external source community.mysql.mysql_db)
     - name: Install MySql client and MySQL Python module
       ansible.builtin.dnf:
-        name:
-          - mysql
-          - python3-PyMySQL
+        name: mysql
+        state: present
+
+    - name: Install MySql client and MySQL Python module
+      ansible.builtin.dnf:
+        name: python3-PyMySQL
         state: present
 
     - name: Lod Schema
