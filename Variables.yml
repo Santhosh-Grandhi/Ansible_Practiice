@@ -22,3 +22,7 @@
       ansible.builtin.debug:
         msg: File variables - {{ USER_NAME }}
 
+    - name: variable passing through CLI
+      ansible.builtin.debug:
+        msg: CLI Variable is {{ Course_Name }}
+
