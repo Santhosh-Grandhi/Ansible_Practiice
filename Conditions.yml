@@ -1,5 +1,8 @@
 - name: Conditions
   hosts: localhost
+  vars:
+    Course_Name: "{{ Course_Name | default('') }}"
+    Trainer_Name: "{{ Trainer_Name | default('') }}"
   tasks:
     - name: Condition1
       ansible.builtin.debug:
