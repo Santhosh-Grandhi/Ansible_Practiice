@@ -4,11 +4,11 @@
     - name: Condition1
       ansible.builtin.debug:
         msg: Welcome to devops course
-      when: Course_Name == "Devops" and Trainer_Name == "Raghu"
+      when: (Course_Name == "Devops" and Trainer_Name == "Raghu")
 
     - name: Condition2
       ansible.builtin.debug:
         msg: Welcome to AWS course
-      when: Course_Name == "AWS" or Trainer_Name == "Raju"
+      when: (Course_Name == "AWS" or Trainer_Name == "Raju")
       #Condition will be passed from CLI
 
