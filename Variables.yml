@@ -2,6 +2,9 @@
   hosts: localhost
   vars:
     NAME: Santhosh #String Data Type
+  vars_files:
+    - usernames.yml
+
   tasks:
     - name: print variable
       ansible.builtin.debug:
@@ -14,4 +17,8 @@
         FRUIT:
           - banana
           - apple
+
+    - name: Print Variable from yml file
+      ansible.builtin.debug:
+        msg: File variables - {{ USER_NAME }}
 
