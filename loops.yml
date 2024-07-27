@@ -7,3 +7,10 @@
       loop :
         - devops
         - aws
+
+    - name: Print loops 2
+      ansible.builtin.debug:
+        msg: item name is {{ item[ITEM_NAME] }} Cost is {{ ITEM_COST }}
+      loop:
+        - { ITEM_NAME: Apple, ITEM_COST: 20 }
+        - { ITEM_NAME: Banana, ITEM_COST: 10 }
