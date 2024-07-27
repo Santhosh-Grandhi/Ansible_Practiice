@@ -1,0 +1,9 @@
+- name: Loops
+  hosts: localhost
+  tasks:
+    - name: print loops
+      ansible.builtin.debug:
+        msg: available courses are {{ item }}
+      loop :
+        - devops
+        - aws
