@@ -11,4 +11,5 @@
         msg: Welcome to AWS course
       when: (Course_Name == "AWS" or Trainer_Name == "Raju")
       #Condition will be passed from CLI
-
+# ansible-playbook Conditions.yml -e Trainer_Name=Raju -e Course_Name=GCP
+# o/p AWS Statement
