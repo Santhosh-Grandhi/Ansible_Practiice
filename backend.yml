@@ -57,7 +57,7 @@
         target: /app/schema/backend.sql
         login_user: root
         login_password: ExpenseApp@1
-        login_host:
+        login_host: 172.31.27.228
 
     - name: Enable and restart backend
       ansible.builtin.systemd_service:

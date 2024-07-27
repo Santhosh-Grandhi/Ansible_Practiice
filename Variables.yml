@@ -1,7 +1,7 @@
 - name: Variables
   hosts: localhost
   vars:
-    NAME: Santhosh
+    NAME: Santhosh #String Data Type
   tasks:
     - name: print variable
       ansible.builtin.debug:
