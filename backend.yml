@@ -53,14 +53,9 @@
         name: python3-PyMySQL
         state: present
 
-    - name: Lod Schema
-      community.mysql.mysql_db:
-        state: import
-        name: all
-        target: /app/schema/backend.sql
-        login_user: root
-        login_password: ExpenseApp@1
-        login_host: 172.31.27.228
+    - name: Load Schema
+      ansible.builtin.shell: mysql -h 172.31.27.228 -uroot -pExpenseApp@1
+
 
     - name: Enable and restart backend
       ansible.builtin.systemd_service:
