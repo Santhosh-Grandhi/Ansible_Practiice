@@ -1,3 +1,5 @@
 - name: Print Variable Name
   ansible.builtin.debug:
     msg: Name is {{ NAME }}
+  vars:
+    NAME: SANTHOSH

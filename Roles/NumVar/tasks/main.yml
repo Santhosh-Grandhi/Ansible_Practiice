@@ -1,3 +1,5 @@
 - name: Print Variable Name
   ansible.builtin.debug:
     msg: Age is {{ AGE }}
+  vars:
+    AGE: 12
