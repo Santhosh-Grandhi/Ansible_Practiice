@@ -1,0 +1,6 @@
+- name: testing
+  hosts: all
+  become: true
+    #  become_user: sudo (optional step as become: true defaults to sudo user)
+  roles:
+      - "{{ program }}"
